@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Logout from '@mui/icons-material/Logout';
+import Divider from "@mui/material/Divider";
 
 const Header = () => {
 
@@ -61,9 +62,10 @@ const Header = () => {
                         <div className="dropDownWrapper">
                             <Button className="rounded-circle me-3"><FaRegBell
                             onClick={handleOpenNotificationsDrop}/></Button>
+
                             <Menu
                                     anchorEl={isOpenNotifications}
-                                    className="notifications"
+                                    className="notifications dropdown_list"
                                     id="notifications"
                                     open={openNotifications}
                                     onClose={handleCloseNotificationsDrop}
@@ -71,26 +73,134 @@ const Header = () => {
                                     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                                 >
-                                    <h4>Orders (12)</h4>
-                                    <MenuItem onClick={handleCloseNotificationsDrop}>
-                                    <ListItemIcon>
-                                        <PersonAdd fontSize="small" />
-                                    </ListItemIcon>
-                                    My Notification
-                                    </MenuItem>
-                                    <MenuItem onClick={handleCloseNotificationsDrop}>
-                                    <ListItemIcon>
-                                        <IoShieldHalfSharp/>
-                                    </ListItemIcon>
-                                    Reset Password
-                                    </MenuItem>
-                                    <MenuItem onClick={handleCloseNotificationsDrop}>
-                                    <ListItemIcon>
-                                        <Logout fontSize="small" />
-                                    </ListItemIcon>
-                                    Logout
-                                    </MenuItem>
+                                    <div className="head ps-3 pb-0">
+                                        <h4>Orders (12)</h4>
+                                    </div>
+
+                                    <Divider className="mb-1"/>
+
+                                    <div className="scroll">
+                                        <MenuItem onClick={handleCloseNotificationsDrop}>
+                                            <div className="d-flex">
+                                                <div>
+                                                    <div className="userImg">
+                                                        <span className="rounded-circle">
+                                                            <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div className="dropdownInfo">
+                                                    <h4>
+                                                        <span>
+                                                            <b>Mahmudal</b>
+                                                            added to his favorite list
+                                                            <b>Leather belt steve madden</b>
+                                                        </span>
+                                                    </h4>
+                                                    <p className="text-sky">few seconds ago</p>
+                                                </div>
+                                            </div>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleCloseNotificationsDrop}>
+                                            <div className="d-flex">
+                                                <div>
+                                                    <div className="userImg">
+                                                        <span className="rounded-circle">
+                                                            <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div className="dropdownInfo">
+                                                    <h4>
+                                                        <span>
+                                                            <b>Mahmudal</b>
+                                                            added to his favorite list
+                                                            <b>Leather belt steve madden</b>
+                                                        </span>
+                                                    </h4>
+                                                    <p className="text-sky">few seconds ago</p>
+                                                </div>
+                                            </div>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleCloseNotificationsDrop}>
+                                            <div className="d-flex">
+                                                <div>
+                                                    <div className="userImg">
+                                                        <span className="rounded-circle">
+                                                            <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div className="dropdownInfo">
+                                                    <h4>
+                                                        <span>
+                                                            <b>Mahmudal</b>
+                                                            added to his favorite list
+                                                            <b>Leather belt steve madden</b>
+                                                        </span>
+                                                    </h4>
+                                                    <p className="text-sky">few seconds ago</p>
+                                                </div>
+                                            </div>
+                                        </MenuItem>
+                                        
+                                        <MenuItem onClick={handleCloseNotificationsDrop}>
+                                            <div className="d-flex">
+                                                <div>
+                                                    <div className="userImg">
+                                                        <span className="rounded-circle">
+                                                            <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div className="dropdownInfo">
+                                                    <h4>
+                                                        <span>
+                                                            <b>Mahmudal</b>
+                                                            added to his favorite list
+                                                            <b>Leather belt steve madden</b>
+                                                        </span>
+                                                    </h4>
+                                                    <p className="text-sky">few seconds ago</p>
+                                                </div>
+                                            </div>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleCloseNotificationsDrop}>
+                                            <div className="d-flex">
+                                                <div>
+                                                    <div className="userImg">
+                                                        <span className="rounded-circle">
+                                                            <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div className="dropdownInfo">
+                                                    <h4>
+                                                        <span>
+                                                            <b>Mahmudal</b>
+                                                            added to his favorite list
+                                                            <b>Leather belt steve madden</b>
+                                                        </span>
+                                                    </h4>
+                                                    <p className="text-sky">few seconds ago</p>
+                                                </div>
+                                            </div>
+                                        </MenuItem>
+                                    </div>
+
+                                    <div className="ps-3 pe-3 pt-2 pb-1 w-100">
+                                        <Button className="btn-blue w-100">View All Notification</Button>
+                                    </div>
                             </Menu>
+                            
                         </div>
 
                         <div className="myAccWrapper">
