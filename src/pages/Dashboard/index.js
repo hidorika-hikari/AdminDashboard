@@ -19,7 +19,7 @@ const Dashboard = () => {
           </div>
 
           <div className="col-md-4 ps-0">
-            <div className="box">
+            <div className="box graphBox">
 
             </div>
           </div>
