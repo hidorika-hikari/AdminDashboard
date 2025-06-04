@@ -317,7 +317,21 @@ main .sidebarWrapper .sidebar ul li button{
 }
 
 .main .sidebarWrapper .sidebar ul .submenu{
-  padding-left: 23px;
+  padding: 0px 45px;
+  position: relative;
+  transition: all 0.3s;
+  height: 0px;
+  overflow: hidden;
+}
+
+.main .sidebarWrapper .sidebar ul .submenu:before {
+  background: #0003;
+  content: "";
+  height: 100%;
+  left: 25px;
+  position: absolute;
+  top: -10px;
+  width: 1px;
 }
 
 .main .sidebarWrapper .sidebar ul .submenu li{
@@ -329,7 +343,7 @@ main .sidebarWrapper .sidebar ul li button{
   color: #5e5d72 !important;
   text-decoration: none;
   display: block;
-  padding: 5px 0px;
+  padding: 6px 0px;
   font-size: 14px;
   font-weight: 500;
   transition: all 0.3s;
@@ -337,4 +351,80 @@ main .sidebarWrapper .sidebar ul li button{
 
 .main .sidebarWrapper .sidebar ul .submenu li a:hover{
   color: #0858f7 !important;
+}
+
+.main .sidebarWrapper .sidebar ul li button.active{
+  background: #f1f1f1 !important;
+}
+
+.main .sidebarWrapper .sidebar ul li button.active .arrow {
+  transform: rotate(90deg);
+}
+
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapse {
+  height: auto;
+  opacity: 1;
+  overflow: inherit;
+  padding: 10px 0;
+}
+
+.main .sidebarWrapper .sidebar ul .submenuWrapper {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all .4s;
+}
+
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapse .submenu {
+  height: auto;
+  opacity: 1;
+}
+
+.logoutWrapper {
+  padding: 0 25px;
+}
+
+.logoutWrapper .logoutBox {
+  align-items: center;
+  background: #bcd2fd;
+  border-radius: 10px;
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 25px;
+  position: relative;
+  width: 100%;
+}
+
+.logoutWrapper .logoutBox:after, .logoutWrapper .logoutBox:before {
+  background: #0858f7;
+  border-radius: 100%;
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+}
+
+.logoutWrapper .logoutBox::before {
+  height: 70px;
+  right: -20px;
+  top: -20px;
+  width: 70px;
+}
+
+.logoutWrapper .logoutBox:after {
+  height: 30px;
+  left: 10px;
+  top: 20px;
+  width: 30px;
+}
+
+.logoutWrapper .logoutBox button{
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.logoutWrapper .logoutBox button svg{
+  margin-right: 5px;
+  font-size: 18px !important;
 }
