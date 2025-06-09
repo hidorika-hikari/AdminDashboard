@@ -1,8 +1,8 @@
-import { MdMenuOpen, MdOutlineLightMode, MdOutlineMailOutline } from "react-icons/md";
+import { MdMenuOpen, MdOutlineLightMode, MdOutlineMailOutline, MdOutlineMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { IoCartOutline, IoShieldHalfSharp } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../../assets/images/logo.png";
 import Button from '@mui/material/Button';
 import SearchBox from "../SearchBox";
@@ -13,6 +13,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Logout from '@mui/icons-material/Logout';
 import Divider from "@mui/material/Divider";
+import { MyContext } from "../../App";
 
 const Header = () => {
 
@@ -21,6 +22,8 @@ const Header = () => {
 
     const openNotifications = Boolean(isOpenNotifications);
     const openMyAcc = Boolean(anchorEl);
+
+    const context = useContext(MyContext);
 
     const handleOpenMyAccDrop = (event) => {
         setAnchorEl(event.currentTarget);
@@ -50,7 +53,11 @@ const Header = () => {
                     </div>
 
                     <div className="col-sm-3 d-flex align-items-center part2 ps-4">
-                        <Button className="rounded-circle me-3"><MdMenuOpen/></Button>
+                        <Button className="rounded-circle me-3" onClick={()=>context.setIsToggleSidebar(!context.isToggleSidebar)}>
+                            {
+                                context.isToggleSidebar === false ? <MdMenuOpen/> : <MdOutlineMenu/>
+                            }
+                        </Button>
                         <SearchBox/>
                     </div>
                     
