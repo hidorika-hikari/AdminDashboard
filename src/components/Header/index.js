@@ -19,10 +19,8 @@ const Header = () => {
 
     const [anchorEl, setAnchorEl] = useState(null);
     const [isOpenNotifications, setIsOpenNotificationsDrop] = useState(false);
-
     const openNotifications = Boolean(isOpenNotifications);
     const openMyAcc = Boolean(anchorEl);
-
     const context = useContext(MyContext);
 
     const handleOpenMyAccDrop = (event) => {
@@ -52,7 +50,7 @@ const Header = () => {
                         </Link>
                     </div>
 
-                    <div className="col-sm-3 d-flex align-items-center part2 ps-4">
+                    <div className="col-sm-3 d-flex align-items-center part2 res-hide">
                         <Button className="rounded-circle me-3" onClick={()=>context.setIsToggleSidebar(!context.isToggleSidebar)}>
                             {
                                 context.isToggleSidebar === false ? <MdMenuOpen/> : <MdOutlineMenu/>
@@ -209,52 +207,56 @@ const Header = () => {
                             </Menu>
                             
                         </div>
+                        {
+                            context.isLogin !== true ? 
+                            <Link to={'/login'}>
+                            <Button className="btn-blue btn-lg">Sign In</Button></Link>
+                            :
+                            <div className="myAccWrapper">
+                                <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop}>
+                                    <div className="myAcc d-flex align-items-center">
+                                        <div className="userImg">
+                                            <span className="rounded-circle">
+                                                <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
+                                            </span>
+                                        </div>
 
-                        <div className="myAccWrapper">
-                            <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop}>
-                                <div className="myAcc d-flex align-items-center">
-                                    <div className="userImg">
-                                        <span className="rounded-circle">
-                                            <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
-                                        </span>
+                                        <div className="userInfo">
+                                            <h4>hidorika shine</h4>
+                                            <p className="mb-0">@hidorika</p>
+                                        </div>
                                     </div>
-
-                                    <div className="userInfo">
-                                        <h4>hidorika shine</h4>
-                                        <p className="mb-0">@hidorika</p>
-                                    </div>
-                                </div>
-                            </Button>
-                            <Menu
-                                anchorEl={anchorEl}
-                                id="account-menu"
-                                open={openMyAcc}
-                                onClose={handleCloseMyAccDrop}
-                                onClick={handleCloseMyAccDrop}
-                                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-                            >
-                                <MenuItem onClick={handleCloseMyAccDrop}>
-                                <ListItemIcon>
-                                    <PersonAdd fontSize="small" />
-                                </ListItemIcon>
-                                Add another account
-                                </MenuItem>
-                                <MenuItem onClick={handleCloseMyAccDrop}>
-                                <ListItemIcon>
-                                    <IoShieldHalfSharp/>
-                                </ListItemIcon>
-                                Reset Password
-                                </MenuItem>
-                                <MenuItem onClick={handleCloseMyAccDrop}>
-                                <ListItemIcon>
-                                    <Logout fontSize="small" />
-                                </ListItemIcon>
-                                Logout
-                                </MenuItem>
-                            </Menu>
-                        </div>
-
+                                </Button>
+                                <Menu
+                                    anchorEl={anchorEl}
+                                    id="account-menu"
+                                    open={openMyAcc}
+                                    onClose={handleCloseMyAccDrop}
+                                    onClick={handleCloseMyAccDrop}
+                                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                                >
+                                    <MenuItem onClick={handleCloseMyAccDrop}>
+                                    <ListItemIcon>
+                                        <PersonAdd fontSize="small" />
+                                    </ListItemIcon>
+                                    Add another account
+                                    </MenuItem>
+                                    <MenuItem onClick={handleCloseMyAccDrop}>
+                                    <ListItemIcon>
+                                        <IoShieldHalfSharp/>
+                                    </ListItemIcon>
+                                    Reset Password
+                                    </MenuItem>
+                                    <MenuItem onClick={handleCloseMyAccDrop}>
+                                    <ListItemIcon>
+                                        <Logout fontSize="small" />
+                                    </ListItemIcon>
+                                    Logout
+                                    </MenuItem>
+                                </Menu>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
