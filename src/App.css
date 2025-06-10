@@ -48,6 +48,11 @@ body {
   padding: 10px 25px !important;
 }
 
+.btn-big svg {
+  font-size: 25px !important;
+  margin-left: 7px;
+}
+
 .full{
   width: 100% !important;
   max-width: 100% !important;
@@ -244,7 +249,7 @@ header .part2{
   margin-top: 0px;
 }
 
-.text-sky{
+.text-sky {
   color: #0858f7 !important;
 }
 
@@ -851,4 +856,47 @@ table td .info h6, table td .info p {
 .loginWithGoogle {
   font-weight: 700 !important;
   text-transform: capitalize !important;
+}
+
+.signUpSection {
+  background: #f1f1f1 !important;
+  height: auto !important;
+  padding: 0;
+}
+
+.signUpSection .loginBox {
+  background: #e4e4e4 !important;
+  padding: 25px 5px !important;
+  position: relative;
+  width: 100% !important;
+  z-index: 100;
+}
+
+.signUpSection .loginBox .wrapper {
+  background: #0000 !important;
+  border: 0 !important;
+  padding-top: 10px !important;
+}
+
+.signUpSection .part1 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.signUpSection .part1 h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.signUpSection .part1 h1 span {
+  font-weight: 800 !important;
+}
+
+.signUpSection .part1 p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  color: #403e57;
 }

@@ -1,56 +1,72 @@
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './pages/Dashboard';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 import { useState, createContext } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 const MyContext = createContext();
 
 function App() {
+    const [isToggleSidebar, setIsToggleSidebar] = useState(false);
+    const [isLogin, setIsLogin] = useState(false);
+    const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
 
-  const [isToggleSidebar, setIsToggleSidebar] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
-  const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
-  const values = {
-    isToggleSidebar,
-    setIsToggleSidebar,
-    isLogin,
-    setIsLogin,
-    isHideSidebarAndHeader,
-    setIsHideSidebarAndHeader
-  }
+    const values = {
+        isToggleSidebar,
+        setIsToggleSidebar,
+        isLogin,
+        setIsLogin,
+        isHideSidebarAndHeader,
+        setIsHideSidebarAndHeader,
+    };
 
-  return (
-    <BrowserRouter>
-      <MyContext.Provider value={values}>
-        {
-          isHideSidebarAndHeader !== true &&
-          <Header/>
-        }
-        <div className='main d-flex'>
-        {
-          isHideSidebarAndHeader !== true &&
-          <div className={`sidebarWrapper ${isToggleSidebar === true ? 'toggle' : ''}`}>
-            <Sidebar/>
-          </div>
-
-        }
-          <div className={`content ${isHideSidebarAndHeader === true && 'full'} ${isToggleSidebar === true ? 'toggle' : ''}`}>
-            <Routes>
-              <Route path="/" exact={true} element={<Dashboard />} />
-              <Route path="/dashboard" exact={true} element={<Dashboard />} />
-              <Route path="/login" exact={true} element={<Login />} />
-            </Routes>
-          </div>
-        </div>
-      </MyContext.Provider>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <MyContext.Provider value={values}>
+                {isHideSidebarAndHeader !== true && <Header />}
+                <div className="main d-flex">
+                    {isHideSidebarAndHeader !== true && (
+                        <div
+                            className={`sidebarWrapper ${isToggleSidebar === true ? 'toggle' : ''}`}
+                        >
+                            <Sidebar />
+                        </div>
+                    )}
+                    <div
+                        className={`content ${isHideSidebarAndHeader === true && 'full'} ${isToggleSidebar === true ? 'toggle' : ''}`}
+                    >
+                        <Routes>
+                            <Route
+                                path="/"
+                                exact={true}
+                                element={<Dashboard />}
+                            />
+                            <Route
+                                path="/dashboard"
+                                exact={true}
+                                element={<Dashboard />}
+                            />
+                            <Route
+                                path="/login"
+                                exact={true}
+                                element={<Login />}
+                            />
+                            <Route
+                                path="/signUp"
+                                exact={true}
+                                element={<SignUp />}
+                            />
+                        </Routes>
+                    </div>
+                </div>
+            </MyContext.Provider>
+        </BrowserRouter>
+    );
 }
 
 export default App;
-export {MyContext}
+export { MyContext };

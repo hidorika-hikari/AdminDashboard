@@ -4,7 +4,7 @@ import { MdDelete, MdShoppingBag } from "react-icons/md";
 import { GiStarsStack } from "react-icons/gi";
 import { IoIosTimer } from "react-icons/io";
 import { HiDotsVertical } from "react-icons/hi";
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Chart } from "react-google-charts";
 import Menu from '@mui/material/Menu';
 import Button from "@mui/material/Button";
@@ -13,6 +13,7 @@ import DashboardBox from "./components/dashboardBox";
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import Pagination from "@mui/material/Pagination";
+import { MyContext } from "../../App";
 
 export const data = [
   ["Year","Sales","Expense"],
@@ -33,8 +34,12 @@ const Dashboard = () => {
     const [showBySetCateBy, setCateBy ] = useState('');
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
-
+    const context = useContext(MyContext);
     const ITEM_HEIGHT = 48;
+
+    useEffect(() =>{
+      context.setIsHideSidebarAndHeader(false);
+    },[])
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
