@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 const MyContext = createContext();
@@ -14,6 +14,20 @@ function App() {
     const [isToggleSidebar, setIsToggleSidebar] = useState(false);
     const [isLogin, setIsLogin] = useState(false);
     const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
+    const [themeMode,setThemeMode] = useState(null);
+
+    useEffect(()=>{
+      if(themeMode === true){
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+        localStorage.setItem('themeMode','light');
+      }
+      else{
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+        localStorage.setItem('themeMode','dark');
+      }
+    },[themeMode]);
 
     const values = {
         isToggleSidebar,
@@ -22,6 +36,8 @@ function App() {
         setIsLogin,
         isHideSidebarAndHeader,
         setIsHideSidebarAndHeader,
+        themeMode,
+        setThemeMode
     };
 
     return (

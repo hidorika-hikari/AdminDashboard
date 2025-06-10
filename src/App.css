@@ -11,6 +11,168 @@ body {
   overflow-x: hidden;
 }
 
+body.dark{
+  background: #071739 !important;
+}
+
+body.dark header{
+  background: #112143 !important;
+}
+
+body.dark header button.rounded-circle{
+  background: #112755 !important;
+}
+
+body.dark header button.rounded-circle svg{
+  color: #fff !important;
+}
+
+body.dark .searchBox{
+  background: #12254e;
+}
+
+body.dark .searchBox input,
+body.dark .searchBox input::-webkit-input-placeholder,
+body.dark .searchBox svg{
+  color: #fff;
+}
+
+body.dark header .logo span{
+  color: #fff !important;
+  opacity: 0.8;
+}
+
+body.dark .myAcc .userInfo *{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .MuiPaper-elevation{
+  background-color: #12254e !important;
+}
+
+body.dark .MuiPaper-elevation li *,
+body.dark .MuiPaper-elevation li{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .dropdown_list li.MuiButtonBase-root{
+  background-color: #12254e !important;
+  background: #12254e !important;
+}
+
+body.dark .dropdown_list .head h4{
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.dark .main .sidebarWrapper .sidebar {
+  background: #112143 !important;
+}
+
+body.dark .main .sidebarWrapper .sidebar ul li button:hover{
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark .main .sidebarWrapper .sidebar ul li button {
+  color: #fffc !important;
+}
+
+body.dark .main .sidebarWrapper .sidebar ul li button.active {
+  color: #fffc !important;
+}
+
+body.dark .main .sidebarWrapper .sidebar ul .submenu::before{
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark .main .sidebarWrapper .sidebar ul .submenu li a{
+  color: #fffc !important;
+}
+
+body.dark .main .sidebarWrapper .sidebar ul .submenu li a:hover{
+  color: #0858f7 !important;
+}
+
+body.dark .logoutWrapper .logoutBox {
+  background: #0000;
+  background-image: linear-gradient(#183e8c, #163474);
+}
+
+body.dark .card{
+  background: #112143 !important;
+  border: 1px solid #10214b !important
+}
+
+body.dark .card .hd {
+  color: #fffc;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+body.dark .cardFilters .col-md-3 h4 {
+  color: #fffc;
+}
+
+body.dark .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark .css-lohd6h-MuiSvgIcon-root-MuiSelect-icon
+body.dark .css-1toxriw-MuiList-root-MuiMenu-list{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .MuiOutlinedInput-notchedOutline {
+  border-color: #fff6 !important;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(odd) {
+  background: #0003 !important;
+}
+
+.table-bordered th, body.dark .table-bordered td {
+  border: 1px solid #ffffff1a !important;
+  background: #112143 !important;
+}
+
+body.dark table td {
+  color: #ffffff80 !important;
+}
+
+body.dark .css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root:hover{
+  color: #0858f7 !important;
+}
+
+body.dark .table tbody .actions button.secondary {
+  background-color: #de2fff !important;
+}
+
+body.dark .table tbody .actions button.success {
+  background-color: #27bf68 !important;
+}
+
+body.dark .table tbody .actions button.error {
+  background-color: #ff6179 !important;
+}
+
+body.dark .table tbody .actions button.secondary svg {
+  color: #fff !important;
+}
+
+body.dark .table tbody .actions button.success svg {
+  color: #fff !important;
+}
+
+body.dark .table tbody .actions button.error svg {
+  color: #fff !important;
+}
 
 ::-webkit-scrollbar{
   width: 5px !important;
@@ -332,8 +494,6 @@ header .part2{
 }
 
 .main .sidebarWrapper .sidebar ul li button .icon svg{
-  color: #000;
-  opacity: 0.7;
   font-size: 22px;
 }
 
@@ -602,10 +762,6 @@ main .sidebarWrapper .sidebar ul li button{
   opacity: 1 !important;
 }
 
-body.light p {
-  font-weight: 400 !important;
-}
-
 .graphBox p {
   color: #fff;
   font-size: 13px;
@@ -662,7 +818,7 @@ body.light p {
 }
 
 .table tbody .actions button svg{
-  font-size: 32px !important;
+  font-size: 30px !important;
 }
 
 table.v-align td {
@@ -732,6 +888,10 @@ table td .info h6, table td .info p {
 
 .table-responsive::-webkit-scrollbar-thumb{
   background: #ccc !important;
+}
+
+body.dark table-responsive::-webkit-scrollbar-thumb{
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 
 .loginSection {
