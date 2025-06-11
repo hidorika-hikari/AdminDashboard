@@ -6,7 +6,9 @@ import Sidebar from './components/Sidebar';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import { useState, createContext, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProductDetails from './pages/ProductDetails';
+import Product from './pages/Product'
 
 const MyContext = createContext();
 
@@ -75,6 +77,16 @@ function App() {
                                 path="/signUp"
                                 exact={true}
                                 element={<SignUp />}
+                            />
+                            <Route
+                                path="/product"
+                                exact={true}
+                                element={<Product/>}
+                            />
+                            <Route
+                                path="/product/details"
+                                exact={true}
+                                element={<ProductDetails />}
                             />
                         </Routes>
                     </div>
