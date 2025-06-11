@@ -169,7 +169,7 @@ const SignUp = () => {
                                     </div>
                                 </form>
 
-                                <span className="text-center d-block mt-3">
+                                <span className="auth-note text-center d-block mt-3">
                                     Don't have an account?
                                     <Link to={'/login'} className="link color">
                                         {' '}

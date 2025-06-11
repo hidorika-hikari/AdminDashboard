@@ -86,7 +86,7 @@ const Login = () => {
                             </div>
 
                             <div className="form-group text-center mb-0">
-                                <Link to={'/forgot-password'} className="link">
+                                <Link to={'/forgot-password'} className="link text-decoration-none">
                                     FORGOT PASSWORD
                                 </Link>
                                 <div className="d-flex align-items-center justify-content-center or mt-3 mb-3">
@@ -110,7 +110,7 @@ const Login = () => {
                     </div>
 
                     <div className="wrapper mt-3 card border footer p-3">
-                        <span className="text-center">
+                        <span className="auth-note text-center">
                             Don't have an account?
                             <Link to={'/signUp'} className="link color">
                                 {''} Register

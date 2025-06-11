@@ -85,7 +85,7 @@ body.dark .main .sidebarWrapper .sidebar ul li button {
 }
 
 body.dark .main .sidebarWrapper .sidebar ul li button.active {
-  color: #fffc !important;
+  color: #000 !important;
 }
 
 body.dark .main .sidebarWrapper .sidebar ul .submenu::before{
@@ -932,6 +932,59 @@ body.light .productDetailsSEction .productInfo .row .col-sm-9 span {
 body.dark .productDetailsSEction .productInfo .icon svg {
   color: #ccc !important;
 }
+
+body.dark .loginSection {
+  background: #112142 !important;
+}
+
+body.dark .signUpSection .loginBox {
+  background: #1b2b4d !important;
+}
+
+body.dark form .form-control {
+  background: #071739 !important;
+  border: 1px solid #ffffff1a !important;
+  color: #fff !important;
+}
+
+body.dark .MuiFormControlLabel-root,
+body.dark .MuiCheckbox-root {
+  color: #ccc;
+}
+
+body.dark input::placeholder {
+  color: #aaa;
+}
+
+body.dark .card {
+  background: #1b2b4d !important;
+  border: 1px solid #10214b !important;
+}
+
+body.dark .auth-note {
+  color: #ccc;
+}
+
+body.dark .loginSection .loginBox .wrapper .or span.line{
+  background: #fff;
+}
+
+body.dark .loginSection .loginBox .wrapper .or span.txt{
+  border: 1px solid #fff;
+}
+
+body.dark .link {
+  color: #fff9;
+}
+
+body.dark .or .line {
+  background-color: #444;
+}
+
+body.dark .or .txt {
+  color: #ccc;
+}
+
 
 .loginSection {
   background: #fff;
