@@ -1,13 +1,16 @@
 import { Breadcrumbs, Chip, emphasize, styled } from '@mui/material';
-import { FaHome } from 'react-icons/fa';
-import { FaTag } from "react-icons/fa6";
+import { FaHome, FaReply } from 'react-icons/fa';
+import { FaTag } from 'react-icons/fa6';
 import { MdBrandingWatermark } from 'react-icons/md';
 import { BiSolidCategoryAlt } from 'react-icons/bi';
-import { AiFillDollarCircle } from "react-icons/ai";
-import { IoIosColorPalette } from "react-icons/io";
-import { MdRateReview } from "react-icons/md";
-import { MdOutlineStorage } from "react-icons/md";
-import { MdOutlinePublishedWithChanges } from "react-icons/md";
+import { AiFillDollarCircle } from 'react-icons/ai';
+import { IoIosColorPalette } from 'react-icons/io';
+import { MdRateReview } from 'react-icons/md';
+import { MdOutlineStorage } from 'react-icons/md';
+import { MdOutlinePublishedWithChanges } from 'react-icons/md';
+import UserAvatarImgComponent from '../../components/userAvatarImg';
+import Rating from '@mui/material/Rating';
+import Button from '@mui/material/Button';
 import React from 'react';
 import Slider from 'react-slick';
 
@@ -45,7 +48,7 @@ const ProductDetails = () => {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
     };
@@ -163,7 +166,7 @@ const ProductDetails = () => {
                                     <div className="row">
                                         <div className="col-sm-3 d-flex align-items-center">
                                             <span className="icon">
-                                                <FaTag/>
+                                                <FaTag />
                                             </span>
                                             <span className="name">Tag</span>
                                         </div>
@@ -259,6 +262,290 @@ const ProductDetails = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="p-4">
+                        <h6 className="mb-3 mt-4">Product Description</h6>
+                        <p style={{ fontWeight: 400 }}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Molestiae reprehenderit repellendus expedita
+                            esse cupiditate quos doloremque rerum, corrupti ab
+                            illum est nihil, voluptate ex dignissimos! Sit
+                            voluptatem delectus nam, molestiae, repellendus ab
+                            sint quo aliquam debitis amet natus doloremque
+                            laudantium? Repudiandae, consequuntur, officiis
+                            quidem quo deleniti, autem non laudantium sequi
+                            error molestiae ducimus accusamus facere velit
+                            consectetur vero dolore natus nihil temporibus
+                            aspernatur quia consequatur? Consequuntur voluptate
+                            deserunt repellat tenetur debitis molestiae
+                            doloribus dicta. In rem illum dolorem atque ratione
+                            voluptates asperiores maxime doloremque laudantium
+                            magni neque ad quae quos quidem, quaerat rerum
+                            ducimus blanditiis reiciendis
+                        </p>
+
+                        <br />
+
+                        <h6 className="mt-4 mb-4">Rating Analytics</h6>
+
+                        <div className="ratingSection">
+                            <div className="ratingrow d-flex align-items-center">
+                                <span className="col1">5 Star</span>
+                                <div className="col2">
+                                    <div className="progress">
+                                        <div
+                                            className="progress-bar"
+                                            style={{ width: '70%' }}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <span className="col3">(22)</span>
+                            </div>
+
+                            <div className="ratingrow d-flex align-items-center">
+                                <span className="col1">4 Star</span>
+                                <div className="col2">
+                                    <div className="progress">
+                                        <div
+                                            className="progress-bar"
+                                            style={{ width: '50%' }}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <span className="col3">(22)</span>
+                            </div>
+
+                            <div className="ratingrow d-flex align-items-center">
+                                <span className="col1">3 Star</span>
+                                <div className="col2">
+                                    <div className="progress">
+                                        <div
+                                            className="progress-bar"
+                                            style={{ width: '50%' }}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <span className="col3">(2)</span>
+                            </div>
+
+                            <div className="ratingrow d-flex align-items-center">
+                                <span className="col1">2 Star</span>
+                                <div className="col2">
+                                    <div className="progress">
+                                        <div
+                                            className="progress-bar"
+                                            style={{ width: '20%' }}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <span className="col3">(2)</span>
+                            </div>
+
+                            <div className="ratingrow d-flex align-items-center">
+                                <span className="col1">1 Star</span>
+                                <div className="col2">
+                                    <div className="progress">
+                                        <div
+                                            className="progress-bar"
+                                            style={{ width: '50%' }}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <span className="col3">(2)</span>
+                            </div>
+                        </div>
+
+                        <br />
+                        <h6 className="mt-4 mb-4">Customer Reviews</h6>
+                        <div className="reviewsSection">
+                            <div className="reviewsRow">
+                                <div className="row">
+                                    <div className="col-sm-7 d-flex">
+                                        <div className="d-flex flex-column">
+                                            <div className="userInfo d-flex align-items-center mb-3">
+                                                <div className="userInfo lg">
+                                                    <UserAvatarImgComponent
+                                                        img="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3"
+                                                        lg={true}
+                                                    />
+                                                </div>
+
+                                                <div className="info ps-3">
+                                                    <h6>hidorika</h6>
+                                                    <span>25 minutes ago</span>
+                                                </div>
+                                            </div>
+                                            <Rating
+                                                name="read-only"
+                                                value={4.5}
+                                                precision={0.5}
+                                                readOnly
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-5 d-flex align-items-center">
+                                        <div className="ms-auto">
+                                            <Button className="btn-blue btn-lg ms-auto">
+                                                <FaReply /> &nbsp; Reply
+                                            </Button>
+                                        </div>
+                                    </div>
+                                    <p className="mt-3">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Omnis quo nostrum
+                                        dolore fugiat ducimus labore debitis
+                                        unde autem recusandae? Eius harum
+                                        tempora quis minima, adipisci natus quod
+                                        magni omnis quas.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="reviewsRow reply">
+                                <div className="row">
+                                    <div className="col-sm-7 d-flex">
+                                        <div className="d-flex flex-column">
+                                            <div className="userInfo d-flex align-items-center mb-3">
+                                                <div className="userInfo lg">
+                                                    <UserAvatarImgComponent
+                                                        img="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3"
+                                                        lg={true}
+                                                    />
+                                                </div>
+
+                                                <div className="info ps-3">
+                                                    <h6>hidorika</h6>
+                                                    <span>25 minutes ago</span>
+                                                </div>
+                                            </div>
+                                            <Rating
+                                                name="read-only"
+                                                value={4.5}
+                                                precision={0.5}
+                                                readOnly
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-5 d-flex align-items-center">
+                                        <div className="ms-auto">
+                                            <Button className="btn-blue btn-lg ms-auto">
+                                                <FaReply /> &nbsp; Reply
+                                            </Button>
+                                        </div>
+                                    </div>
+                                    <p className="mt-3">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Omnis quo nostrum
+                                        dolore fugiat ducimus labore debitis
+                                        unde autem recusandae? Eius harum
+                                        tempora quis minima, adipisci natus quod
+                                        magni omnis quas.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="reviewsRow reply">
+                                <div className="row">
+                                    <div className="col-sm-7 d-flex">
+                                        <div className="d-flex flex-column">
+                                            <div className="userInfo d-flex align-items-center mb-3">
+                                                <div className="userInfo lg">
+                                                    <UserAvatarImgComponent
+                                                        img="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3"
+                                                        lg={true}
+                                                    />
+                                                </div>
+
+                                                <div className="info ps-3">
+                                                    <h6>hidorika</h6>
+                                                    <span>25 minutes ago</span>
+                                                </div>
+                                            </div>
+                                            <Rating
+                                                name="read-only"
+                                                value={4.5}
+                                                precision={0.5}
+                                                readOnly
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-5 d-flex align-items-center">
+                                        <div className="ms-auto">
+                                            <Button className="btn-blue btn-lg ms-auto">
+                                                <FaReply /> &nbsp; Reply
+                                            </Button>
+                                        </div>
+                                    </div>
+                                    <p className="mt-3">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Omnis quo nostrum
+                                        dolore fugiat ducimus labore debitis
+                                        unde autem recusandae? Eius harum
+                                        tempora quis minima, adipisci natus quod
+                                        magni omnis quas.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="reviewsRow">
+                                <div className="row">
+                                    <div className="col-sm-7 d-flex">
+                                        <div className="d-flex flex-column">
+                                            <div className="userInfo d-flex align-items-center mb-3">
+                                                <div className="userInfo lg">
+                                                    <UserAvatarImgComponent
+                                                        img="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3"
+                                                        lg={true}
+                                                    />
+                                                </div>
+
+                                                <div className="info ps-3">
+                                                    <h6>hidorika</h6>
+                                                    <span>25 minutes ago</span>
+                                                </div>
+                                            </div>
+                                            <Rating
+                                                name="read-only"
+                                                value={4.5}
+                                                precision={0.5}
+                                                readOnly
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-5 d-flex align-items-center">
+                                        <div className="ms-auto">
+                                            <Button className="btn-blue btn-lg ms-auto">
+                                                <FaReply /> &nbsp; Reply
+                                            </Button>
+                                        </div>
+                                    </div>
+                                    <p className="mt-3">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Omnis quo nostrum
+                                        dolore fugiat ducimus labore debitis
+                                        unde autem recusandae? Eius harum
+                                        tempora quis minima, adipisci natus quod
+                                        magni omnis quas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6 className="mt-4 mb-4">Review Reply Form</h6>
+                        <form className="reviewForm">
+                            <textarea placeholder="Write here..."></textarea>
+                            <Button
+                                variant="text"
+                                color="primary"
+                                className="btn-blue btn-big btn-lg w-100 mt-4"
+                                fullWidth
+                                type="button"
+                            >
+                                drop your replies
+                            </Button>
+                        </form>
                     </div>
                 </div>
             </div>

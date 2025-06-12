@@ -14,6 +14,7 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Logout from '@mui/icons-material/Logout';
 import Divider from "@mui/material/Divider";
 import { MyContext } from "../../App";
+import UserAvatarImgComponent from "../userAvatarImg";
 
 const Header = () => {
 
@@ -89,11 +90,7 @@ const Header = () => {
                                         <MenuItem onClick={handleCloseNotificationsDrop}>
                                             <div className="d-flex">
                                                 <div>
-                                                    <div className="userImg">
-                                                        <span className="rounded-circle">
-                                                            <img src="https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3" alt="user_avatar"/>
-                                                        </span>
-                                                    </div>
+                                                    <UserAvatarImgComponent img={'https://i.scdn.co/image/ab67616d00001e026f157409ae8578b9695be2b3'}/>
                                                 </div>
 
                                                 <div className="dropdownInfo">
