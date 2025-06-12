@@ -44,7 +44,7 @@ const Sidebar = () => {
                             <ul className="submenu">
                                 <li><Link to={'/product'}>Product List</Link></li>
                                 <li><Link to={'/product/details'}>Product View</Link></li>
-                                <li><Link to="#">Product Upload</Link></li>
+                                <li><Link to={'/product/upload'}>Product Upload</Link></li>
                             </ul>
                         </div>
                     </li>

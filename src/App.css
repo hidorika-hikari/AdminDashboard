@@ -138,7 +138,11 @@ body.dark .MuiOutlinedInput-notchedOutline {
   border-color: #fff6 !important;
 }
 
-body.dark .table-striped tbody tr:nth-of-type(odd) {
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #0000000d;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(odd) td{
   background: #0003 !important;
 }
 
@@ -1003,6 +1007,20 @@ body.dark .ratingrow .col3 {
   color: #f0f0f0;
 }
 
+body.dark .form .form-group input, body.dark .form .form-group textarea {
+  color: rgba(255, 255, 255, 0.8) !important;
+  background: rgb(43, 60, 95) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgb(37, 53, 87) !important;
+  border-image: initial !important;
+}
+
+body.dark .MuiRating-root *,
+body.light .MuiRating-root * {
+  color: #faaf00 !important;
+}
+
 .loginSection {
   background: #fff;
   height: 100vh;
@@ -1334,5 +1352,39 @@ body.dark .ratingrow .col3 {
   height: 200px;
   outline: #ffdead !important;
   padding: 15px;
+  width: 100%;
+}
+
+.form .form-group {
+  margin-bottom: 25px;
+}
+
+.form .form-group h6 {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.form .form-group textarea {
+  height: 120px;
+  padding-top: 15px;
+}
+
+.form .form-group input, .form .form-group textarea {
+  font-size: 14px;
+  height: 60px;
+  padding-left: 15px;
+  width: 100%;
+  background: rgb(250, 250, 250);
+  border-radius: 5px;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  border-image: initial !important;
+  outline: none !important;
+}
+
+.imgUploadBox {
+  flex-wrap: nowrap;
+  gap: 10px;
   width: 100%;
 }

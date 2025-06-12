@@ -13,6 +13,7 @@ import DashboardBox from "./components/dashboardBox";
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import Pagination from "@mui/material/Pagination";
+import Rating from "@mui/material/Rating";
 import { MyContext } from "../../App";
 
 export const data = [
@@ -196,8 +197,8 @@ const Dashboard = () => {
                       <del className="old">$21.00</del>
                       <span className="new text-danger">$19.00</span>
                     </td>
-                    <td>#1</td>
-                    <td>4.9(16)</td>
+                    <td>25</td>
+                    <td><Rating name="size-small" defaultValue={2} size="small" /></td>
                     <td>380</td>
                     <td>$38k</td>
                     <td>

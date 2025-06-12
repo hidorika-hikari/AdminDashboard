@@ -1,12 +1,13 @@
-import { FaEye, FaPencilAlt } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
-import { useContext, useEffect, useState } from 'react'
-import Button from "@mui/material/Button";
+import { FaEye, FaPencilAlt } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
+import { useContext, useEffect, useState } from 'react';
+import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
-import Pagination from "@mui/material/Pagination";
-import { MyContext } from "../../App";
+import Pagination from '@mui/material/Pagination';
+import Rating from '@mui/material/Rating';
+import { MyContext } from '../../App';
 
 const ProductDetails = () => {
     const [showBy, setShowBy] = useState('');
@@ -65,7 +66,7 @@ const ProductDetails = () => {
                     </div>
 
                     <div className="table-responsive mt-3">
-                        <table className="table table-bordered table-stripe v-align">
+                        <table className="table table-bordered table-striped v-align">
                             <thead className="table-dark">
                                 <tr>
                                     <th>UID</th>
@@ -115,8 +116,148 @@ const ProductDetails = () => {
                                             $19.00
                                         </span>
                                     </td>
+                                    <td>25</td>
+                                    <td>
+                                        <Rating
+                                            name="size-small"
+                                            defaultValue={2}
+                                            size="small"
+                                        />
+                                    </td>
+                                    <td>380</td>
+                                    <td>$38k</td>
+                                    <td>
+                                        <div className="actions d-flex align-items-center">
+                                            <Button
+                                                className="secondary"
+                                                color="secondary"
+                                            >
+                                                <FaEye />
+                                            </Button>
+                                            <Button
+                                                className="success"
+                                                color="success"
+                                            >
+                                                <FaPencilAlt />
+                                            </Button>
+                                            <Button
+                                                className="error"
+                                                color="error"
+                                            >
+                                                <MdDelete />
+                                            </Button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>#1</td>
-                                    <td>4.9(16)</td>
+                                    <td>
+                                        <div className="d-flex align-items-center productBox">
+                                            <div className="imgWrapper">
+                                                <div className="img card shadow m-0">
+                                                    <img
+                                                        src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                                                        alt=""
+                                                        className="w-100"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="info ps-3">
+                                                <h6>
+                                                    Tops and Skirt set for
+                                                    Female...
+                                                </h6>
+                                                <p>
+                                                    Women's exclusive summer
+                                                    Tops and skirt set for
+                                                    Female Tops and skirt set
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>womans</td>
+                                    <td>richman</td>
+                                    <td>
+                                        <del className="old">$21.00</del>
+                                        <span className="new text-danger">
+                                            $19.00
+                                        </span>
+                                    </td>
+                                    <td>25</td>
+                                    <td>
+                                        <Rating
+                                            name="size-small"
+                                            defaultValue={2}
+                                            size="small"
+                                        />
+                                    </td>
+                                    <td>380</td>
+                                    <td>$38k</td>
+                                    <td>
+                                        <div className="actions d-flex align-items-center">
+                                            <Button
+                                                className="secondary"
+                                                color="secondary"
+                                            >
+                                                <FaEye />
+                                            </Button>
+                                            <Button
+                                                className="success"
+                                                color="success"
+                                            >
+                                                <FaPencilAlt />
+                                            </Button>
+                                            <Button
+                                                className="error"
+                                                color="error"
+                                            >
+                                                <MdDelete />
+                                            </Button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1</td>
+                                    <td>
+                                        <div className="d-flex align-items-center productBox">
+                                            <div className="imgWrapper">
+                                                <div className="img card shadow m-0">
+                                                    <img
+                                                        src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                                                        alt=""
+                                                        className="w-100"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="info ps-3">
+                                                <h6>
+                                                    Tops and Skirt set for
+                                                    Female...
+                                                </h6>
+                                                <p>
+                                                    Women's exclusive summer
+                                                    Tops and skirt set for
+                                                    Female Tops and skirt set
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>womans</td>
+                                    <td>richman</td>
+                                    <td>
+                                        <del className="old">$21.00</del>
+                                        <span className="new text-danger">
+                                            $19.00
+                                        </span>
+                                    </td>
+                                    <td>25</td>
+                                    <td>
+                                        <Rating
+                                            name="size-small"
+                                            defaultValue={2}
+                                            size="small"
+                                        />
+                                    </td>
                                     <td>380</td>
                                     <td>$38k</td>
                                     <td>
@@ -144,6 +285,7 @@ const ProductDetails = () => {
                                 </tr>
                             </tbody>
                         </table>
+
                         <div className="d-flex tableFooter">
                             <p>
                                 Showing <b>12</b> of <b>60</b> results

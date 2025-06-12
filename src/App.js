@@ -9,6 +9,7 @@ import { useState, createContext, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProductDetails from './pages/ProductDetails';
 import Product from './pages/Product'
+import ProductUpload from './pages/ProductUpload';
 
 const MyContext = createContext();
 
@@ -87,6 +88,11 @@ function App() {
                                 path="/product/details"
                                 exact={true}
                                 element={<ProductDetails />}
+                            />
+                            <Route
+                                path="/product/upload"
+                                exact={true}
+                                element={<ProductUpload />}
                             />
                         </Routes>
                     </div>
