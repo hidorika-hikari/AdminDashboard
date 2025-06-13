@@ -1,6 +1,9 @@
 import { Breadcrumbs, Chip, emphasize, styled } from '@mui/material';
 import { FaCloudUploadAlt, FaHome } from 'react-icons/fa';
 import React, { useState } from 'react';
+import { IoCloseSharp } from "react-icons/io5";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { FaImages } from "react-icons/fa";
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Rating from '@mui/material/Rating';
@@ -258,6 +261,24 @@ const ProductUpload = () => {
                         <div className='imagesUploadSec'>
                             <h5 className="mb-4">Media And Published</h5>
                             <div className='imgUploadBox d-flex align-items-center'>
+                                <div className='uploadBox'>
+                                <span className='remove'><IoCloseSharp /></span>
+                                    <div className='box'>
+                                        <LazyLoadImage
+                                            alt={"image"}
+                                            effect="blur"
+                                            className="w-100"
+                                            src={'https://mironcoder-hotash.netlify.app/images/product/single/01.webp'}
+                                            />
+                                    </div>
+                                </div>
+                                <div className='uploadBox'>
+                                    <input type="file" multiple="" name="images"></input>
+                                    <div className='info'>
+                                        <FaImages />
+                                        <h5>image upload</h5>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
                         <br/>
