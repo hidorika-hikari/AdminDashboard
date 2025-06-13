@@ -1022,7 +1022,7 @@ body.light .MuiRating-root * {
 }
 
 body.dark .imgUploadBox .uploadBox {
-  /border: 1px dashed #fff3;
+  border: 1px dashed #fff3;
 }
 
 body.dark .imgUploadBox .uploadBox {
